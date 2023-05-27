@@ -1,10 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { BrowserRouter as Router } from "react-router-dom";
 import App from "./App.jsx";
 import "./index.css";
 
 import "@rainbow-me/rainbowkit/styles.css";
-import { getDefaultWallets, RainbowKitProvider, darkTheme } from "@rainbow-me/rainbowkit";
+import {
+  getDefaultWallets,
+  RainbowKitProvider,
+  darkTheme,
+} from "@rainbow-me/rainbowkit";
 import { configureChains, createConfig, WagmiConfig } from "wagmi";
 import { mainnet, polygon, optimism, arbitrum } from "wagmi/chains";
 import { alchemyProvider } from "wagmi/providers/alchemy";
@@ -29,19 +34,21 @@ const wagmiConfig = createConfig({
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <WagmiConfig config={wagmiConfig}>
-      <RainbowKitProvider
-        theme={darkTheme({
-          accentColor: "#7b3fe4",
-          accentColorForeground: "white",
-          borderRadius: "medium",
-          fontStack: "system",
-          overlayBlur: "small",
-        })}
-        chains={chains}
-      >
-        <App />
-      </RainbowKitProvider>
-    </WagmiConfig>
+    <Router>
+      <WagmiConfig config={wagmiConfig}>
+        <RainbowKitProvider
+          theme={darkTheme({
+            accentColor: "#7b3fe4",
+            accentColorForeground: "white",
+            borderRadius: "medium",
+            fontStack: "system",
+            overlayBlur: "small",
+          })}
+          chains={chains}
+        >
+          <App />
+        </RainbowKitProvider>
+      </WagmiConfig>
+    </Router>
   </React.StrictMode>
 );

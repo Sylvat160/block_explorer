@@ -1,12 +1,21 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { Route, Routes } from "react-router-dom";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
+import { Navbar, Footer } from "./components";
 
 function App() {
   
   return (<>
-    <div className="App" > Block explorer </div>
+    <div className="App" > 
+      <Navbar />
+
+      <Routes>
+        <Route path="/" element={<h1>Home</h1>} />
+        {/* <Route path="/about" element={<h1>About</h1>} /> */}
+      </Routes>
+
+      <Footer />
+    </div>
   </>);
 }
 
