@@ -5,7 +5,7 @@ import { Navbar, Footer } from "./components";
 
 function App() {
   return (
-    <div className="relative sm:-8 p-4 bg-[#13131a] min-h-screen flex flex-row">
+    <div className="relative sm:-8 p-4  min-h-screen">
       <Navbar />
 
       <Routes>
