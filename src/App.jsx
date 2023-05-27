@@ -4,14 +4,10 @@ import viteLogo from "/vite.svg";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 function App() {
-  return (
-    <>
-      <ConnectButton className='bg-white' />
-      <h1 className="text-3xl font-bold underline text-red-600">
-        Hello world!
-      </h1>
-    </>
-  );
+  
+  return (<>
+    <div className="App" > Block explorer </div>
+  </>);
 }
 
 export default App;
