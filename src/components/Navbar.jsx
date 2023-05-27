@@ -6,7 +6,6 @@ import { useNavigate } from "react-router-dom";
 const Navbar = () => {
   const navigate = useNavigate();
   const [isActive, setIsActive] = useState("Home");
-  const [toggleDrawer, setToggleDrawer] = useState(false);
   return (
     <div className="">
       <div className=" p-2 flex justify-between content-center border-b border-gray-500">
@@ -48,7 +47,6 @@ const Navbar = () => {
                 } cursor-pointer`}
                 onClick={() => {
                   setIsActive(link.name);
-                  setToggleDrawer(false);
                   navigate(link.link);
                 }}
               >
