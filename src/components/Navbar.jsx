@@ -45,11 +45,11 @@ const Navbar = () => {
                 key={link.name}
                 className={`flex p-4 ${
                   isActive === link.name && "text-[#0A4D7C]"
-                }`}
+                } cursor-pointer`}
                 onClick={() => {
-                    setIsActive(link.name);
-                    setToggleDrawer(false);
-                    navigate(link.link);
+                  setIsActive(link.name);
+                  setToggleDrawer(false);
+                  navigate(link.link);
                 }}
               >
                 {link.name}
