@@ -6,7 +6,7 @@ import { Home, Blockchain, Developers, NFTs, Tokens } from './pages';
 
 function App() {
   return (
-    <div className="relative sm:p-8 p-4  min-h-screen">
+    <div >
       <Navbar />
 
       <Routes>

@@ -11,7 +11,7 @@ export const navLinks = [
     },
     {
         name : "Tokens",
-        link: '/token',
+        link: '/tokens',
         disable: true,
     },
     {
