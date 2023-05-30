@@ -1,10 +1,18 @@
 import React from "react";
 import { useGlobalContext } from "../context/index.jsx";
-import { SearchBar } from "../components";
+import { SearchBar, Overview } from "../components";
 import { ethPurple, wavelight } from "../assets";
 
 const Home = () => {
-  const { ethPrice } = useGlobalContext();
+  const {
+    ethPrice,
+    gasPrice,
+    dailyPercentage,
+    marketCap,
+    finalizedAndSafeBlock,
+  } = useGlobalContext();
+  const { finalized, safe } = finalizedAndSafeBlock;
+
   return (
     <div className="flex flex-col justify-center items-center">
       <div
@@ -14,6 +22,14 @@ const Home = () => {
           <SearchBar placeholder="Search by Address / Txn Hash / Block / Token" />
         </div>
       </div>
+      <Overview
+        ethPrice={ethPrice}
+        gasPrice={gasPrice}
+        dailyPercentage={dailyPercentage}
+        marketCap={marketCap}
+        lastFinalisedBlock={finalized.blockNumber}
+        lastSafeBlock={safe.blockNumber}
+      />
     </div>
   );
 };

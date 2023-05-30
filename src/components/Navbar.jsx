@@ -15,7 +15,7 @@ const Navbar = () => {
           <p className=" text-gray-400">ETH Price :</p>
 
           <p className="text-[#0A4D7C] pr-1">
-            ${ ethPrice } <span className={`${(dailyPercentage >= 0.4) ? 'text-green-400' : 'text-red-500'}`}>({ parseFloat(dailyPercentage.toFixed(2)) })</span>
+            ${ ethPrice } <span className={`${(dailyPercentage >= 0) ? 'text-green-400' : 'text-red-500'}`}>({ parseFloat(dailyPercentage.toFixed(2)) }%)</span>
           </p>
 
           <div className="flex">
