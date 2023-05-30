@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { gas, ethPurple, xplorer } from "../assets";
 import { navLinks } from "../constants";
 import { useNavigate } from "react-router-dom";
+import { useGlobalContext } from "../context";
 
 const Navbar = () => {
+  const { ethPrice, gasPrice, dailyPercentage } = useGlobalContext();
   const navigate = useNavigate();
   const [isActive, setIsActive] = useState("Home");
   return (
@@ -13,13 +15,13 @@ const Navbar = () => {
           <p className=" text-gray-400">ETH Price :</p>
 
           <p className="text-[#0A4D7C] pr-1">
-            $1000 <span className=" text-red-600">(0.3%)</span>
+            ${ ethPrice } <span className={`${(dailyPercentage >= 0.4) ? 'text-green-400' : 'text-red-500'}`}>({ parseFloat(dailyPercentage.toFixed(2)) })</span>
           </p>
 
           <div className="flex">
             <img src={gas} alt="gas" className=" pr-1" />
-            <p className="pr-1">Gas :</p>
-            <span className="text-[#0A4D7C]"> 21 Gwei</span>
+            <p className="pr-1 text-gray-500">Gas :</p>
+            <span className="text-[#0A4D7C]"> {gasPrice} Gwei</span>
           </div>
         </div>
 
