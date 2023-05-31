@@ -8,6 +8,7 @@ import globe from './globe.svg'
 import time from './time.svg'
 import tx from './tx.svg'
 import block from './block.svg'
+import transaction from './transaction.svg'
 
 
 export {
@@ -20,5 +21,6 @@ export {
     globe,
     time,
     tx,
-    block
+    block,
+    transaction
 }

@@ -9,7 +9,7 @@ const Navbar = () => {
   const navigate = useNavigate();
   const [isActive, setIsActive] = useState("Home");
   return (
-    <div className="">
+    <div className="bg-[#111A2E]">
       <div className=" p-2 flex justify-between content-center border-b border-gray-500">
         <div className="flex h-auto  items-center justify-around text-sm font-medium">
           <p className=" text-gray-400">ETH Price :</p>

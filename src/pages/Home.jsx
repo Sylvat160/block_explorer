@@ -1,6 +1,6 @@
 import React from "react";
 import { useGlobalContext } from "../context/index.jsx";
-import { SearchBar, Overview } from "../components";
+import { SearchBar, Overview, LatestBlock, LatestTx } from "../components";
 import { ethPurple, wavelight } from "../assets";
 
 const Home = () => {
@@ -30,6 +30,16 @@ const Home = () => {
         lastFinalisedBlock={finalized.blockNumber}
         lastSafeBlock={safe.blockNumber}
       />
+
+      <div className="flex flex-wrap  justify-center items-center w-full pt-5">
+        
+        <div className="md:w-[45%] w-full flex flex-col bg-[#111A2E] items-start drop-shadow-xl m-2 border-[0.1px] dark:border-gray-500 rounded-md">
+          <LatestBlock />
+        </div>
+        <div className="md:w-[45%] w-full flex flex-col bg-[#111A2E] items-center drop-shadow-xl m-2 border-[0.1px] dark:border-gray-500 rounded">
+          <LatestTx />
+        </div>
+      </div>
     </div>
   );
 };

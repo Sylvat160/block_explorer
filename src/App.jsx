@@ -6,7 +6,7 @@ import { Home, Blockchain, Developers, NFTs, Tokens } from './pages';
 
 function App() {
   return (
-    <div >
+    <div className=" text-gray-300 overflow-hidden">
       <Navbar />
 
       <Routes>

@@ -36,7 +36,7 @@ const Overview = ({
   lastSafeBlock,
 }) => {
   return (
-    <div className="md:flex lg:flex  justify-around items-center bg-[#111A2E] rounded-lg relative bottom-3 drop-shadow-md p-5">
+    <div className="md:flex lg:flex  justify-around items-center bg-[#111A2E] rounded-lg relative bottom-3 drop-shadow-2xl p-5">
       <div className="flex w-96 flex-col p-2 md:border-r border-gray-500">
         <Card
           icon={blackether}

@@ -48,3 +48,9 @@ export const timeAgo = (secondsAgo) => {
   // if the elapsed time is more than 24 hours, display the number of elapsed days, hours, and remaining minutes
   return `${elapsedDays} ${daysString} ${remainingHours} ${hoursString} ${remainingMinutes} ${minutesString}`;
 };
+
+export const styles = {
+  border_color : "dark:border-gray-500",
+  text_color : "text-gray-300",
+  blue: "#2a71ff"
+}
