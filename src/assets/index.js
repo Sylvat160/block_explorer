@@ -7,6 +7,7 @@ import blackether from './blackether.svg'
 import globe from './globe.svg'
 import time from './time.svg'
 import tx from './tx.svg'
+import block from './block.svg'
 
 
 export {
@@ -18,5 +19,6 @@ export {
     blackether,
     globe,
     time,
-    tx
+    tx,
+    block
 }

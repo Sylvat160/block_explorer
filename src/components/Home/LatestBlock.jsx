@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { block } from '../../assets'
+
 
 const LatestBlock = () => {
   return (
