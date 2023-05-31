@@ -33,10 +33,10 @@ const Home = () => {
 
       <div className="flex flex-wrap  justify-center items-center w-full pt-5">
         
-        <div className="md:w-[45%] w-full flex flex-col bg-[#111A2E] items-start drop-shadow-xl m-2 border-[0.1px] dark:border-gray-500 rounded-md">
+        <div className="md:w-[48%] w-full flex flex-col bg-[#111A2E] items-start drop-shadow-xl m-2 border-[0.1px] dark:border-gray-500 rounded-md">
           <LatestBlock />
         </div>
-        <div className="md:w-[45%] w-full flex flex-col bg-[#111A2E] items-center drop-shadow-xl m-2 border-[0.1px] dark:border-gray-500 rounded">
+        <div className="md:w-[48%] w-full flex flex-col bg-[#111A2E] items-center drop-shadow-xl m-2 border-[0.1px] dark:border-gray-500 rounded">
           <LatestTx />
         </div>
       </div>

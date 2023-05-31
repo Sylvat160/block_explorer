@@ -9,6 +9,7 @@ import time from './time.svg'
 import tx from './tx.svg'
 import block from './block.svg'
 import transaction from './transaction.svg'
+import alchemySvg from './alchemy.jpeg'
 
 
 export {
@@ -22,5 +23,6 @@ export {
     time,
     tx,
     block,
-    transaction
+    transaction,
+    alchemySvg
 }

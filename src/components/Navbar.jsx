@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { gas, ethPurple, xplorer } from "../assets";
+import { gas, ethPurple, xplorer, alchemySvg } from "../assets";
 import { navLinks } from "../constants";
 import { useNavigate } from "react-router-dom";
 import { useGlobalContext } from "../context";
@@ -29,6 +29,7 @@ const Navbar = () => {
           <div className=" ml-2 cursor-pointer rounded-lg border border-secondaryBgLight bg-primaryBgLight p-2.5 px-3.5 dark:border-secondaryBgDark dark:bg-primaryBgDark">
             <img src={ethPurple} alt="eth" className=" w-3" />
           </div>
+          
         </div>
       </div>
       <div className=" p-2 flex justify-between content-center border-b border-gray-500">
