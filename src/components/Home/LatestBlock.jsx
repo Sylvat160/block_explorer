@@ -56,9 +56,6 @@ const LatestBlock = () => {
     fetchLatestBlock();
   }, []);
 
-  useEffect(() => {
-    console.log(latestBlocks);
-  },[latestBlocks]);
 
 
   return (
@@ -66,9 +63,7 @@ const LatestBlock = () => {
       <div className={`p-2 border-b-[0.1px] ${styles.border_color} text-sm`}>
         Latest Blocks
       </div>
-      {latestBlocks > 0 ? (
-        <>...</>
-      ) : (
+      {latestBlocks && (
         latestBlocks.map((block, i) => {
           const { miner, number, timestamp, transactions, gasUsed } = block;
           const gasUsedInWei = Utils.formatUnits(gasUsed, "gwei");

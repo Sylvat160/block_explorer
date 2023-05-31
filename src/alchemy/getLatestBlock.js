@@ -19,7 +19,7 @@ export const getLatestBlock = async (maxBlcks = 6) => {
 
     const latestBlocks = await Promise.all(blocksReturned);
 
-    console.log('latestBlocks', latestBlocks);
+    // console.log('latestBlocks', latestBlocks);
 
     return latestBlocks.map(({miner, number, timestamp, transactions, gasUsed}) => ({
         miner,

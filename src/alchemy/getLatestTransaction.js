@@ -24,11 +24,12 @@ export const getLatestTransaction = async (maxTxns = 6) => {
 
     console.log('latestTransaction', latestTransaction);
 
-    return latestTransaction.map(({blockNumber, from, to, transactionHash}) => ({
+    return latestTransaction.map(({blockNumber, from, to, hash, value}) => ({
         blockNumber,
         from,
         to,
-        transactionHash,
-        age : timeAgo(timestamp)
+        hash,
+        age : timeAgo(timestamp),
+        value
     }))
 }
