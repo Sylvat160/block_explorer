@@ -3,9 +3,9 @@ import    Blockchain  from './Blockchain'
 import    Developers  from './Developers'
 import    NFTs  from './Nfts'
 import    Tokens  from './Tokens'
-import AddressInfo from './Address'
-import BlockInfo from './Block'
-import TransactionInfo from './Transaction'
+import Address from './Address'
+import Block from './Block'
+import Transaction from './Transaction'
 
 export {
     Home,
@@ -13,7 +13,7 @@ export {
     Developers,
     NFTs,
     Tokens,
-    AddressInfo,
-    BlockInfo,
-    TransactionInfo
+    Address,
+    Block,
+    Transaction
 }

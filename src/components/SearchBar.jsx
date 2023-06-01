@@ -20,7 +20,7 @@ const SearchBar = ({placeholder}) => {
          } else if (searchTerm === "") {
            navigate("/");
          } else {
-           alert("Bad request");
+           alert("Invalid search term");
          }
 
         
@@ -37,7 +37,7 @@ const SearchBar = ({placeholder}) => {
           placeholder={placeholder}
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="h-10 w-full  border-secondaryBgLight bg-tertiaryBgLight py-2 pl-8 placeholder:text-sm placeholder:text-tertiaryBgDark focus:border-transparent focus:outline-none focus:ring-2 focus:ring-activeLight dark:border-secondaryBgDark dark:bg-tertiaryBgDark dark:placeholder:text-tertiaryBgLight"
+          className="h-10 w-full  border-secondaryBgLight bg-tertiaryBgLight py-2 pl-8 placeholder:text-sm placeholder:text-tertiaryBgDark focus:border-transparent focus:outline-none focus:ring-2 dark:border-secondaryBgDark dark:bg-tertiaryBgDark dark:placeholder:text-tertiaryBgLight text-gray-700"
         />
 
         <button

@@ -1,5 +1,5 @@
 import { alchemy } from "../configs";
-
+import { ethers } from "ethers";
 /**
  * Get block information
  * @param {string|number} query - the hash | number of the block to retrieve
@@ -16,8 +16,7 @@ export const getBlockInfo = async (query) => {
     }
 
     const blockInfo = await alchemy.core.getBlock(hashOrNumber);
-
-    console.log('block', block);
+    console.log('block', blockInfo);
 
     return { ...blockInfo};
 }
