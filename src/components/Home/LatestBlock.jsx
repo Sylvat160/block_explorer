@@ -4,16 +4,24 @@ import { useGlobalContext } from "../../context";
 import { styles, timeAgo, shortenAddress } from "../../utils";
 import { getLatestBlock } from "../../alchemy";
 import { Utils } from "alchemy-sdk";
+import { useNavigate } from "react-router-dom";
 
 
 const BlockCard = ({miner, number, timestamp, transactions, gasUsed, style}) => {
+  const navigate = useNavigate();
   return (
     <div className={`flex justify-between items-center p-2 ${style}`}>
       <div className="bg-[#162138] m-1 w-10 h-10 flex justify-center items-center rounded">
         <img src={block} alt="block" />
       </div>
       <div className="flex flex-col relative md:right-10 right-2">
-        <h4 className=" text-sm text-[#2a71ff]"> {number} </h4>
+        <h4
+          className=" text-sm text-[#2a71ff] cursor-pointer"
+          onClick={() => navigate(`block/${number}`)}
+        >
+          {" "}
+          {number}{" "}
+        </h4>
         <p className=" text-xs text-gray-400"> {timeAgo(timestamp)} ago </p>
       </div>
       <div className="flex flex-col">
