@@ -1,13 +1,19 @@
-import { default as Home } from './Home'
-import { default as Blockchain } from './Blockchain'
-import { default as Developers } from './Developers'
-import { default as NFTs } from './Nfts'
-import { default as Tokens } from './Tokens'
+import    Home  from './Home'
+import    Blockchain  from './Blockchain'
+import    Developers  from './Developers'
+import    NFTs  from './Nfts'
+import    Tokens  from './Tokens'
+import AddressInfo from './Address'
+import BlockInfo from './Block'
+import TransactionInfo from './Transaction'
 
 export {
     Home,
     Blockchain,
     Developers,
     NFTs,
-    Tokens
+    Tokens,
+    AddressInfo,
+    BlockInfo,
+    TransactionInfo
 }

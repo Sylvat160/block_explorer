@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { blackether, globe, time, tx } from "../../assets";
+import { styles } from "../../utils";
 
 const Card = ({ icon, title, value, percentage, style }) => {
   return (
@@ -36,7 +37,7 @@ const Overview = ({
   lastSafeBlock,
 }) => {
   return (
-    <div className="md:flex lg:flex  justify-around items-center bg-[#111A2E] rounded-lg relative bottom-3 drop-shadow-2xl p-5">
+    <div className={`md:flex lg:flex  justify-around items-center bg-[#111A2E] rounded-lg relative bottom-3 drop-shadow-2xl p-5 border-[0.1px] ${styles.border_color}`}>
       <div className="flex w-96 flex-col p-2 md:border-r border-gray-500">
         <Card
           icon={blackether}

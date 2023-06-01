@@ -10,6 +10,7 @@ import tx from './tx.svg'
 import block from './block.svg'
 import transaction from './transaction.svg'
 import alchemySvg from './alchemy.jpeg'
+import map from './map.png'
 
 
 export {
@@ -24,5 +25,6 @@ export {
     tx,
     block,
     transaction,
-    alchemySvg
+    alchemySvg,
+    map
 }
