@@ -27,7 +27,7 @@ const BlockCard = ({miner, number, timestamp, transactions, gasUsed, style}) => 
       <div className="flex flex-col">
         <h4 className=" text-sm">
           Fee Recipient{" "}
-          <span className={`text-[${styles.blue}]`}>
+          <span className={`text-[${styles.blue}]`} onClick={() => navigate(`/address/${miner}`)}>
             {" "}
             {shortenAddress(miner)}{" "}
           </span>

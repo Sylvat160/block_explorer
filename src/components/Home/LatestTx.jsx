@@ -4,25 +4,27 @@ import { useGlobalContext } from "../../context";
 import { styles, shortenAddress, mediumAddress } from "../../utils";
 import { getLatestTransaction } from "../../alchemy";
 import { Utils } from "alchemy-sdk";
+import { useNavigate } from "react-router-dom";
 
 const TransactionCard = ({blockNumber, from, to, value, hash, timestamp, style}) => {
+  const navigate = useNavigate();
   return (
     <div className={`flex justify-between items-center p-2 ${style}`}>
       <div className="bg-[#162138] m-1 w-10 h-10 flex justify-center items-center rounded">
         <img src={transaction} alt="block" />
       </div>
       <div className="flex flex-col">
-        <h4 className=" text-sm text-[#2a71ff]"> {mediumAddress(hash)} </h4>
+        <h4 className=" text-sm text-[#2a71ff] cursor-pointer" onClick={() => navigate(`/tx/${hash}`)}> {mediumAddress(hash)} </h4>
         <p className=" text-xs text-gray-400"> {timestamp} </p>
       </div>
       <div className="flex flex-col">
         <h4 className=" text-sm">
           From{" "}
-          <span className={`text-[${styles.blue}]`}> { mediumAddress(from) } </span>
+          <span className={`text-[${styles.blue}] cursor-pointer`} onClick={() => navigate(`/address/${from}`)} title={from}> { mediumAddress(from) } </span>
         </h4>
         <p className=" text-xs text-gray-400">
           to{" "}
-          <span className={`text-[${styles.blue}]`}> {mediumAddress(to)} </span>
+          <span className={`text-[${styles.blue}] cursor-pointer`} onClick={() => navigate(`/address/${to}`)}> {mediumAddress(to)} </span>
         </p>
       </div>
 
