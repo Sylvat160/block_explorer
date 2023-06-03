@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Copy, Tick } from "../assets";
+import { copy, ok } from "../assets";
 
 
 const CopyToClipboard = ({ text }) => {
@@ -31,8 +31,8 @@ const CopyToClipboard = ({ text }) => {
         onClick={() => copyToClipboard(text)}
       >
         <img
-          src={copiedText === text ? Tick : Copy}
-          className="hover:outline-activeDark "
+          src={copiedText === text ? ok : copy}
+          className="hover:outline-activeDark w-4 pl-1"
           alt="copy to clipboard"
         />
       </button>

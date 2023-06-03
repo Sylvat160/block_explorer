@@ -12,6 +12,8 @@ import transaction from './transaction.svg'
 import alchemySvg from './alchemy.jpeg'
 import map from './map.png'
 import arrow from './arrow.svg'
+import copy from './copy.svg'
+import ok from './ok.svg'
 
 
 export {
@@ -28,5 +30,7 @@ export {
     transaction,
     alchemySvg,
     map,
-    arrow
+    arrow,
+    copy,
+    ok
 }

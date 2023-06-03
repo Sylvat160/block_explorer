@@ -9,7 +9,7 @@ import { getLatestTransaction } from "./getLatestTransaction";
 import { getLatestBlock } from "./getLatestBlock";
 import { getGenesisBlock } from "./getGenesisBlock";
 import { getBlockInfo } from "./getBlockInfo";
-import { getAddressInfo } from "./getAddressInfo";
+import { getAddressInfo, getAddressTransactions } from "./getAddressInfo";
 
 export {
     getEthPrice,
@@ -23,5 +23,6 @@ export {
     getLatestBlock,
     getGenesisBlock,
     getBlockInfo,
-    getAddressInfo
+    getAddressInfo,
+    getAddressTransactions
 }

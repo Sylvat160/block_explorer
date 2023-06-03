@@ -12,6 +12,7 @@ export const getTransaction = async (transactionHash) => {
 
     // regular expression to check if the transaction hash is valid
     const transactionHashRegex = new RegExp(/^(0x)?[0-9a-f]{64}$/i);
+    console.log('hash', transactionHash);
 
     // check if the transaction hash is valid
     if (!transactionHashRegex.test(transactionHash)) {

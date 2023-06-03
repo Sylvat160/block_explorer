@@ -18,7 +18,7 @@ function App() {
         <Route path="/tokens" element={<Tokens />} />
         <Route path="/block/:blockNumber" element={<Block />} />
         <Route path="/address/:address" element={<Address />} />
-        <Route path="/transaction/:transactionHash" element={<Transaction />} />
+        <Route path="/tx/:transactionHash" element={<Transaction />} />
 
       </Routes>
 

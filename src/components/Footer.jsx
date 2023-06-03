@@ -1,6 +1,7 @@
-import React, {useState} from 'react'
-import { blackether, map } from '../assets'
-import { Community, Products, Companies } from '../constants';
+import React, { useState } from "react";
+import { blackether, map } from "../assets";
+import { Community, Products, Companies } from "../constants";
+import { CopyToClipboard } from "../components";
 
 const Footer = () => {
   const [address, setAddress] = useState(
@@ -8,8 +9,8 @@ const Footer = () => {
   );
 
   const onTop = () => {
-    window.scrollTo(0, 0)
-  }
+    window.scrollTo(0, 0);
+  };
   return (
     <footer className="mt-10 bg-primaryBgLight pb-0 pt-10 dark:bg-primaryBgDark">
       <div className="m-auto px-5">
@@ -135,10 +136,10 @@ const Footer = () => {
         <div className="flex flex-col justify-between text-xs text-primaryTextLight dark:text-primaryTextDark md:flex-row">
           <p className="my-2">X-Plorer &#169; 2023</p>
           <div className="flex items-center">
-            {/* <CopyToClipboard text={address} /> */}
             <p className="my-2">
               Donations:
               <span className="mx-1 text-activeLight dark:text-activeDark">
+                <CopyToClipboard text={address} />
                 {address ? address : "..."}
               </span>
               ❤️
@@ -148,6 +149,6 @@ const Footer = () => {
       </div>
     </footer>
   );
-}
+};
 
-export default Footer
+export default Footer;

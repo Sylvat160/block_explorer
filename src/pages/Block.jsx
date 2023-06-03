@@ -9,11 +9,6 @@ import { getBlockInfo } from "../alchemy";
 const BlockInfo = ({ block }) => {
   const navigate = useNavigate();
   return (
-    // <div className="mx-5">
-    //   <div className="my-4 text-lg font-medium">
-    //     Block <span> #{block.number} </span>
-    //   </div>
-    // </div>
     <div className="mx-5">
       <div className="my-4 text-lg font-medium">
         Block{" "}
@@ -48,34 +43,7 @@ const BlockInfo = ({ block }) => {
           <div className="block w-full py-1 text-base sm:flex sm:px-0 ">
             <h4 className="w-1/3 text-transactionGray">Status:</h4>
             <div className="flex w-2/3">
-              {/* <div
-                  className={`rounded border p-1 px-1.5 text-xs
-                    ${
-                      block?.status === 0
-                        ? "border-[#a1001b] bg-[#a1001b]/10 text-[#a1001b] "
-                        : block?.status === 1
-                        ? "border-[#00a186] bg-[#00a186]/10 text-[#00a186]"
-                        : ""
-                    }
-                  `}
-                >
-                  <div className="flex items-center justify-center">
-                    {block?.status === 1 ? (
-                      <div className="mr-0.5 rounded-full bg-[#00a186] px-1 text-[10px] text-stone-200 dark:text-black">
-                        &#10003;
-                      </div>
-                    ) : (
-                      <div className="mr-0.5 rounded-full bg-[#a1001b] px-1 text-[10px] text-stone-200 dark:text-black">
-                        &#10007;
-                      </div>
-                    )}
-                    {block?.status === 0
-                      ? "Failed"
-                      : block?.status === 1
-                      ? "Success"
-                      : ""}
-                  </div>
-                </div> */}
+              
               WIP
             </div>
           </div>

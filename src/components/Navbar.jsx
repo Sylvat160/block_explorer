@@ -46,7 +46,7 @@ const Navbar = () => {
           <p className="pl-2 font-medium text-lg text-gray-400">X-plorer</p>
         </div>
 
-        <div className="flex flex-row items-center ">
+        <div className="md:flex flex-row items-center hidden">
           <ul className="flex flex-row">
             {navLinks.map((link) => (
               <li

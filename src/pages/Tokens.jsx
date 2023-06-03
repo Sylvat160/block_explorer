@@ -2,8 +2,10 @@ import React from 'react'
 
 const Tokens = () => {
   return (
-    <div>Tokens</div>
-  )
+    <div className=" h-screen flex justify-center items-center">
+      Coming Soon
+    </div>
+  );
 }
 
 export default Tokens
