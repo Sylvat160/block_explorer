@@ -17,17 +17,19 @@ const Table = ({ history }) => {
 
   return (
     <div>
-      <ReactPaginate
-        previousLabel="<- "
-        nextLabel=" ->"
-        pageCount={pageCount}
-        onPageChange={changePage}
-        pageRangeDisplayed={0}
-        marginPagesDisplayed={0}
-        nextClassName=" mx-2 px-2 py-1 border border-slate-400 rounded-md text-[#2a71ff] hover:bg-slate-800 hover:text-white"
-        previousClassName="mx-2 px-2 py-1 border border-slate-400 rounded-md text-[#2a71ff] hover:bg-slate-800 hover:text-white"
-        containerClassName="flex justify-center items-center my-5"
-      />
+      {history?.length > 0 && (
+        <ReactPaginate
+          previousLabel="<- "
+          nextLabel=" ->"
+          pageCount={pageCount}
+          onPageChange={changePage}
+          pageRangeDisplayed={0}
+          marginPagesDisplayed={0}
+          nextClassName=" mx-2 px-2 py-1 border border-slate-400 rounded-md text-[#2a71ff] hover:bg-slate-800 hover:text-white"
+          previousClassName="mx-2 px-2 py-1 border border-slate-400 rounded-md text-[#2a71ff] hover:bg-slate-800 hover:text-white"
+          containerClassName="flex justify-center items-center my-5"
+        />
+      )}
       <table className="w-full">
         <thead>
           <tr className="text-tertiaryText text-left text-[13px] font-semibold tracking-wide bg-slate-800 border-b border-slate-400">
@@ -126,18 +128,27 @@ const Table = ({ history }) => {
               );
             })}
         </tbody>
+        {history?.length === 0 && (
+          <tbody className="bg-slate-800">
+            <tr className="border-b-[0.1px] border-slate-400">
+              <td className="py-2 pl-5 text-left">No transactions found</td>
+            </tr>
+          </tbody>
+        )}
       </table>
-      <ReactPaginate
-        previousLabel="<- "
-        nextLabel=" ->"
-        pageCount={pageCount}
-        onPageChange={changePage}
-        pageRangeDisplayed={0}
-        marginPagesDisplayed={0}
-        nextClassName=" mx-2 px-2 py-1 border border-slate-400 rounded-md text-[#2a71ff] hover:bg-slate-800 hover:text-white"
-        previousClassName="mx-2 px-2 py-1 border border-slate-400 rounded-md text-[#2a71ff] hover:bg-slate-800 hover:text-white"
-        containerClassName="flex justify-center items-center my-5"
-      />
+      {history?.length > 0 && (
+        <ReactPaginate
+          previousLabel="<- "
+          nextLabel=" ->"
+          pageCount={pageCount}
+          onPageChange={changePage}
+          pageRangeDisplayed={0}
+          marginPagesDisplayed={0}
+          nextClassName=" mx-2 px-2 py-1 border border-slate-400 rounded-md text-[#2a71ff] hover:bg-slate-800 hover:text-white"
+          previousClassName="mx-2 px-2 py-1 border border-slate-400 rounded-md text-[#2a71ff] hover:bg-slate-800 hover:text-white"
+          containerClassName="flex justify-center items-center my-5"
+        />
+      )}
     </div>
   );
 };
