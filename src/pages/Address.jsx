@@ -108,12 +108,17 @@ const Address = () => {
       <section className="mx-1 my-4 w-full overflow-hidden rounded-xl border shadow-lg dark:border-tertiaryBgDark dark:bg-transactionBgDark dark:shadow-tertiaryBgLight/20">
         <div className="flex w-full justify-between p-5">
           <p className="text-sm">
-            Latest 25 from a total of {addressHistory?.transfers.length}{" "}
-            transactions
+            {addressHistory?.transfers?.length > 0 ? (
+              <>
+                Latest 25 from a total of {addressHistory?.transfers.length}{" "}
+                transactions
+              </>
+            ) : (
+              <> 0 Transaction </>
+            )}{" "}
           </p>
         </div>
         <Table history={addressHistory?.transfers} />
-        
       </section>
     </div>
   );

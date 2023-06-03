@@ -132,6 +132,11 @@ const Table = ({ history }) => {
           <tbody className="bg-slate-800">
             <tr className="border-b-[0.1px] border-slate-400">
               <td className="py-2 pl-5 text-left">No transactions found</td>
+              <td className="py-2 pl-5 text-left"></td>
+              <td className="py-2 pl-5 text-left"></td>
+              <td className="py-2 pl-5 text-left"></td>
+              <td className="py-2 pl-5 text-left"></td>
+              <td className="py-2 pl-5 text-left"></td>
             </tr>
           </tbody>
         )}
