@@ -14,14 +14,21 @@ const Navbar = () => {
         <div className="flex h-auto  items-center justify-around text-sm font-medium">
           <p className=" text-gray-400">ETH Price :</p>
 
-          <p className="text-[#0A4D7C] pr-1">
-            ${ ethPrice } <span className={`${(dailyPercentage >= 0) ? 'text-green-400' : 'text-red-500'}`}>({ parseFloat(dailyPercentage.toFixed(2)) }%)</span>
+          <p className="text-[#2a71ff] pr-1">
+            ${ethPrice}{" "}
+            <span
+              className={`${
+                dailyPercentage >= 0 ? "text-green-400" : "text-red-500"
+              }`}
+            >
+              ({parseFloat(dailyPercentage.toFixed(2))}%)
+            </span>
           </p>
 
           <div className="flex">
             <img src={gas} alt="gas" className=" pr-1" />
             <p className="pr-1 text-gray-500">Gas :</p>
-            <span className="text-[#0A4D7C]"> {gasPrice} Gwei</span>
+            <span className="text-[#2a71ff]"> {gasPrice} Gwei</span>
           </div>
         </div>
 
@@ -29,7 +36,6 @@ const Navbar = () => {
           <div className=" ml-2 cursor-pointer rounded-lg border border-secondaryBgLight bg-primaryBgLight p-2.5 px-3.5 dark:border-secondaryBgDark dark:bg-primaryBgDark">
             <img src={ethPurple} alt="eth" className=" w-3" />
           </div>
-          
         </div>
       </div>
       <div className=" p-2 flex justify-between content-center border-b border-gray-500">
@@ -46,7 +52,7 @@ const Navbar = () => {
               <li
                 key={link.name}
                 className={`flex p-4 ${
-                  isActive === link.name && "text-[#0A4D7C]"
+                  isActive === link.name && "text-[#2a71ff]"
                 } cursor-pointer`}
                 onClick={() => {
                   setIsActive(link.name);

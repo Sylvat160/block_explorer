@@ -86,12 +86,11 @@ const Footer = () => {
               </div>
               <div>
                 <p className="mt-2 w-full text-xs text-secondaryBgDark dark:text-secondaryBgLight lg:w-[300px]">
-                  <span className="font-semibold text-activeLight dark:text-yellow-300">
+                  <span className="font-semibold text-activeLight dark:text-[#2a71ff]">
                     X-Plorer
                   </span>{" "}
-                  is a user-friendly Ethereum block explorer and analytics
-                  platform powered by Alchemy SDK, enabling developers to
-                  explore, verify and analyze blockchain data.
+                  is a Block Explorer and Analytics Platform for Ethereum, a
+                  decentralized smart contracts platform.
                 </p>
               </div>
 
@@ -106,7 +105,7 @@ const Footer = () => {
               <ul>
                 {Companies.map((company) => (
                   <li className="my-4 text-xs" key={company.name}>
-                    <a href={company.link}>{ company.name }</a>
+                    <a href={company.link}>{company.name}</a>
                   </li>
                 ))}
               </ul>
@@ -116,7 +115,7 @@ const Footer = () => {
               <ul>
                 {Community.map((community) => (
                   <li className="my-4 text-xs" key={community.name}>
-                    <a href={Community.link}>{ community.name }</a>
+                    <a href={Community.link}>{community.name}</a>
                   </li>
                 ))}
               </ul>
@@ -126,7 +125,7 @@ const Footer = () => {
               <ul>
                 {Products.map((product) => (
                   <li className="my-4 text-xs" key={product.name}>
-                    <a href={product.link}>{ product.name }</a>
+                    <a href={product.link}>{product.name}</a>
                   </li>
                 ))}
               </ul>
